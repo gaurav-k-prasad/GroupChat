@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>Chat</title>
+        <link rel='stylesheet' href='style.css'>
+    </head>
+    <body>
+        <div id="overlay"></div>
+        <div id="get-name">
+            <h2>Name</h2>
+            <input type="text" name="name" placeholder="Name" title="Name" autocomplete="off">
+            <button id="name-select-button">Chat</button>
+        </div>
+        
+        <div class="container flex blur">
+            <div class="data">
+            </div>
+            
+            <div class="your-message flex">
+                <div class="reply display-none"></div>
+                <input type="text" id="input" name="message" title="Message" placeholder="Message" autocomplete="off">
+                <button id="send">Send</button>
+            </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuid.min.js"></script>
+        <script src='client.js'></script>
+    </body>
+</html>

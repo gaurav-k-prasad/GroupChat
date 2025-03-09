@@ -1,0 +1,199 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: rgb(219, 219, 219);
+}
+
+body {
+	width: 100%;
+	height: 100svh;
+	background-color: rgb(40, 40, 40);
+	font-family: Arial, Helvetica, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.blur {
+	filter: blur(2px);
+}
+
+.flex {
+	display: flex;
+}
+
+.data {
+	flex-grow: 1;
+	scroll-behavior: smooth;
+	color: rgb(220, 220, 220);
+	overflow: auto;
+	border-radius: 10px;
+	margin: 10px;
+	padding: 0 10px;
+}
+
+.data::-webkit-scrollbar {
+	background-color: black;
+	width: 6px;
+}
+
+.data::-webkit-scrollbar-thumb {
+	background-color: rgb(105, 105, 105);
+	border-radius: 5px;
+}
+
+.data::-webkit-scrollbar-track {
+	background-color: rgb(36, 36, 36);
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	width: 6px;
+}
+
+.container {
+	flex-direction: column;
+	width: 50%;
+	height: 100%;
+	gap: 0.5rem;
+	padding-bottom: 38px;
+	padding: 0.8rem;
+	/* filter: blur(5px); */
+}
+
+.your-message {
+	width: 100%;
+	height: 35px;
+	gap: 10px;
+	align-content: center;
+	position: relative;
+	justify-content: space-between;
+}
+
+#send {
+	background-color: rgb(189, 224, 255);
+	color: black;
+	padding: 5px 10px;
+	min-width: 75px;
+	width: 75px;
+	right: 0.5rem;
+	border-radius: 7px;
+	cursor: pointer;
+}
+
+#input {
+	width: calc(100% - 60px - 3rem);
+	border-radius: 7px;
+	padding: 5px;
+	background-color: black;
+	border: 1px grey solid;
+	font-size: 1rem;
+	color: white;
+	min-width: 100px;
+	flex-grow: 1;
+}
+
+.message {
+	padding: 7px 0;
+	padding-bottom: 5px;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.your-message * {
+	height: 40px;
+}
+
+.reply {
+	background-color: rgba(41, 125, 41, 0.519);
+	color: white;
+	width: 100px;
+	flex-grow: 1;
+	flex-basis: 150px;
+	text-align: center;
+	border-radius: 8px;
+	min-width: 50px;
+	line-height: 38px;
+	vertical-align: middle;
+	padding: 0px 10px;
+	border: 2px solid green;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+#get-name {
+	position: absolute;
+	display: flex;
+	background-color: rgb(45, 45, 45);
+	width: 50%;
+	min-width: 300px;
+	max-width: 500px;
+    position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	justify-content: space-between;
+	flex-direction: column;
+	padding: 1rem;
+	z-index: 10;
+	border-radius: 1rem;
+	color: white;
+	padding: 28px;
+	height: 180px;
+}
+
+#get-name input {
+	width: 100%;
+	padding: 5px;
+	margin: 10px;
+	border-radius: 5px;
+	border: 0;
+	align-self: center;
+	height: 30px;
+	color: black;
+}
+
+#overlay {
+	filter: blur(8px);
+	width: 100%;
+	height: 100svh;
+	position: absolute;
+	z-index: 5;
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+#name-select-button {
+	width: 100px;
+	height: 2.5rem;
+	border-radius: 10px;
+	background-color: rgb(0, 111, 89);
+	color: white;
+	align-self: flex-end;
+	cursor: pointer;
+}
+
+.user {
+	cursor: pointer;
+}
+
+.display-none {
+	display: none !important;
+}
+
+.connect {
+	color: rgb(234, 255, 186);
+	font-weight: bold;
+}
+
+.disconnect {
+	color: rgb(255, 62, 62);
+	font-weight: bold;
+}
+
+@media (max-width : 800px) {
+	.container {
+		width: 100%;
+	}
+}
