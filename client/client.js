@@ -135,7 +135,6 @@ function setNameForSocket() {
 	container.classList.remove("blur");
 
 	wss = new WebSocket("ws://localhost:8080");
-	// const wss = new WebSocket("https://zz1j2hqn-8080.inc1.devtunnels.ms/");
 	color = createColor();
 
 	// * WebSocket

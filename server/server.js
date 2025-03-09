@@ -1,5 +1,6 @@
 const WebSocket = require("ws");
 const http = require("http");
+const port = 8000 || process.env.PORT;
 
 const server = http.createServer((req, res) => {
 	res.write("Started the server");
@@ -30,6 +31,6 @@ wss.on("connection", (ws) => {
 	});
 });
 
-server.listen(8080, () => {
-	console.log("Server running on http://localhost:8080");
+server.listen(port, () => {
+	console.log("Server running on port 8080");
 });
