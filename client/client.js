@@ -134,7 +134,7 @@ function setNameForSocket() {
 	getNamePopup.classList.add("display-none");
 	container.classList.remove("blur");
 
-	wss = new WebSocket("ws://localhost:8080");
+	wss = new WebSocket("https://groupchat-ut4v.onrender.com");
 	color = createColor();
 
 	// * WebSocket
